@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion />
+	<parent>
+		<groupId />
+		<artifactId />
+		<version />
+		<relativePath />
+	</parent>
+	<groupId />
+	<artifactId />
+	<packaging />
+	<name />
+	<version />
+	<description />
+	<url />
+	<prerequisites />
+	<issueManagement />
+	<ciManagement />
+	<inceptionYear />
+	<mailingLists />
+	<developers />
+	<contributors />
+	<licenses />
+	<scm />
+	<organization />
+	<build>
+		<defaultGoal />
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId />
+					<artifactId />
+					<version />
+					<configuration />
+					<dependencies>
+						<dependency>
+							<groupId />
+							<artifactId />
+							<version />
+						</dependency>
+					</dependencies>
+					<executions />
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins />
+	</build>
+	<profiles>
+		<profile>
+			<id />
+			<activation />
+			<build>
+				<defaultGoal />
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId />
+							<artifactId />
+							<version />
+							<configuration />
+							<dependencies>
+								<dependency>
+									<groupId />
+									<artifactId />
+									<version />
+								</dependency>
+							</dependencies>
+							<executions />
+						</plugin>
+					</plugins>
+				</pluginManagement>
+				<plugins />
+			</build>
+			<modules>
+				<module />
+			</modules>
+			<dependencyManagement>
+				<dependencies>
+					<dependency>
+						<groupId />
+						<artifactId />
+						<version />
+						<classifier />
+						<type />
+						<scope />
+						<systemPath />
+						<optional />
+						<exclusions>
+							<exclusion>
+								<groupId />
+								<artifactId />
+							</exclusion>
+						</exclusions>
+					</dependency>
+				</dependencies>
+			</dependencyManagement>
+			<dependencies>
+				<dependency>
+					<groupId />
+					<artifactId />
+					<version />
+					<classifier />
+					<type />
+					<scope />
+					<systemPath />
+					<optional />
+					<exclusions>
+						<exclusion>
+							<groupId />
+							<artifactId />
+						</exclusion>
+					</exclusions>
+				</dependency>
+			</dependencies>
+			<properties />
+		</profile>
+	</profiles>
+	<modules>
+		<module />
+	</modules>
+	<repositories />
+	<pluginRepositories />
+	<dependencies>
+		<dependency>
+			<groupId />
+			<artifactId />
+			<version />
+			<classifier />
+			<type />
+			<scope />
+			<systemPath />
+			<optional />
+			<exclusions>
+				<exclusion>
+					<groupId />
+					<artifactId />
+				</exclusion>
+			</exclusions>
+		</dependency>
+	</dependencies>
+	<reports />
+	<reporting />
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId />
+				<artifactId />
+				<version />
+				<classifier />
+				<type />
+				<scope />
+				<systemPath />
+				<optional />
+				<exclusions>
+					<exclusion>
+						<groupId />
+						<artifactId />
+					</exclusion>
+				</exclusions>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<distributionManagement />
+	<properties />
+</project>
