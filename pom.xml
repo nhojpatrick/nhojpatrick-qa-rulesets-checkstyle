@@ -128,7 +128,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-site-plugin</artifactId>
-					<version>3.7.1</version>
+					<version>${plugins.maven.maven-site-plugin}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -374,6 +374,7 @@
 		<!-- plugin versions -->
 		<plugins.github.ekryd.sortpom-maven-plugin>2.11.0</plugins.github.ekryd.sortpom-maven-plugin>
 		<plugins.maven.maven-enforcer-plugin>3.0.0-M3</plugins.maven.maven-enforcer-plugin>
+		<plugins.maven.maven-site-plugin>3.9.0</plugins.maven.maven-site-plugin>
 		<plugins.takari.maven>0.7.7</plugins.takari.maven>
 		<!-- JPMS -->
 		<project.Automatic-Module-Name>com.github.nhojpatrick.checkstyle.rules</project.Automatic-Module-Name>
