@@ -81,7 +81,17 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-enforcer-plugin</artifactId>
-					<version>3.0.0-M3</version>
+					<version>${plugins.maven.maven-enforcer-plugin}</version>
+					<configuration>
+						<rules>
+							<requireJavaVersion>
+								<version>[1.8,9),[11,)</version>
+							</requireJavaVersion>
+							<requireMavenVersion>
+								<version>[3.6.3]</version>
+							</requireMavenVersion>
+						</rules>
+					</configuration>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -178,16 +188,6 @@
 						<goals>
 							<goal>enforce</goal>
 						</goals>
-						<configuration>
-							<rules>
-								<requireJavaVersion>
-									<version>[1.8,9),[11,)</version>
-								</requireJavaVersion>
-								<requireMavenVersion>
-									<version>[3.6.3]</version>
-								</requireMavenVersion>
-							</rules>
-						</configuration>
 					</execution>
 				</executions>
 			</plugin>
@@ -373,6 +373,7 @@
 		<project.reporting.outputEncoding>${project.custom.encoding}</project.reporting.outputEncoding>
 		<!-- plugin versions -->
 		<plugins.github.ekryd.sortpom-maven-plugin>2.11.0</plugins.github.ekryd.sortpom-maven-plugin>
+		<plugins.maven.maven-enforcer-plugin>3.0.0-M3</plugins.maven.maven-enforcer-plugin>
 		<plugins.takari.maven>0.7.7</plugins.takari.maven>
 		<!-- JPMS -->
 		<project.Automatic-Module-Name>com.github.nhojpatrick.checkstyle.rules</project.Automatic-Module-Name>
