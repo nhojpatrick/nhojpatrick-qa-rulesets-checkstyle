@@ -15,14 +15,26 @@
 	<description />
 	<url />
 	<prerequisites />
-	<issueManagement />
+	<issueManagement>
+		<system />
+		<url />
+	</issueManagement>
 	<ciManagement />
 	<inceptionYear />
 	<mailingLists />
 	<developers />
 	<contributors />
-	<licenses />
-	<scm />
+	<licenses>
+		<license>
+			<name />
+			<url />
+		</license>
+	</licenses>
+	<scm>
+		<connection />
+		<developerConnection />
+		<url />
+	</scm>
 	<organization />
 	<build>
 		<defaultGoal />
@@ -161,6 +173,15 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-	<distributionManagement />
+	<distributionManagement>
+		<repository>
+			<id />
+			<url />
+		</repository>
+		<snapshotRepository>
+			<id />
+			<url />
+		</snapshotRepository>
+	</distributionManagement>
 	<properties />
 </project>
