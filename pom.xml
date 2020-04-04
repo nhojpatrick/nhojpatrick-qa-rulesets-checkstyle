@@ -132,6 +132,11 @@
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jarsigner-plugin</artifactId>
+					<version>${plugins.maven.maven-jarsigner-plugin}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-javadoc-plugin</artifactId>
 					<version>${plugins.maven.maven-javadoc-plugin}</version>
 					<configuration>
@@ -448,6 +453,7 @@
 		<plugins.maven.maven-help-plugin>3.2.0</plugins.maven.maven-help-plugin>
 		<plugins.maven.maven-install-plugin>3.0.0-M1</plugins.maven.maven-install-plugin>
 		<plugins.maven.maven-jar-plugin>3.2.0</plugins.maven.maven-jar-plugin>
+		<plugins.maven.maven-jarsigner-plugin>3.0.0</plugins.maven.maven-jarsigner-plugin>
 		<plugins.maven.maven-javadoc-plugin>3.2.0</plugins.maven.maven-javadoc-plugin>
 		<plugins.maven.maven-project-info-reports-plugin>3.0.0</plugins.maven.maven-project-info-reports-plugin>
 		<plugins.maven.maven-release-plugin>3.0.0-M1</plugins.maven.maven-release-plugin>
