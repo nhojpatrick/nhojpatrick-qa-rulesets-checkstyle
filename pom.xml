@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<!--parent / -->
 	<!--groupId / -->
-	<groupId>com.github.nhojpatrick.checkstyle</groupId>
+	<groupId>com.github.nhojpatrick.qa</groupId>
 	<!--artifactId / -->
 	<artifactId>nhojpatrick-checkstyle-rules</artifactId>
 	<!--packaging / -->
@@ -12,7 +12,7 @@
 	<!--name / -->
 	<name>Checkstyle Rules</name>
 	<!--version / -->
-	<version>1.0.1-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<!--description / -->
 	<description>The Checkstyle Rules project</description>
 	<!--url / -->
@@ -264,8 +264,8 @@
 			<resource>
 				<directory>src/main/resources</directory>
 				<excludes>
-					<exclude>com/github/nhojpatrick/sortpom**</exclude>
-					<exclude>com/github/nhojpatrick/versions**</exclude>
+					<exclude>com/github/nhojpatrick/qa/sortpom/sortorderfile**</exclude>
+					<exclude>com/github/nhojpatrick/qa/versions/rules**</exclude>
 				</excludes>
 			</resource>
 		</resources>
