@@ -141,7 +141,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-source-plugin</artifactId>
-					<version>3.0.1</version>
+					<version>${plugins.maven.maven-source-plugin}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -393,6 +393,7 @@
 		<plugins.maven.maven-javadoc-plugin>3.2.0</plugins.maven.maven-javadoc-plugin>
 		<plugins.maven.maven-resources-plugin>3.1.0</plugins.maven.maven-resources-plugin>
 		<plugins.maven.maven-site-plugin>3.9.0</plugins.maven.maven-site-plugin>
+		<plugins.maven.maven-source-plugin>3.2.1</plugins.maven.maven-source-plugin>
 		<plugins.takari.maven>0.7.7</plugins.takari.maven>
 		<!-- JPMS -->
 		<project.Automatic-Module-Name>com.github.nhojpatrick.checkstyle.rules</project.Automatic-Module-Name>
