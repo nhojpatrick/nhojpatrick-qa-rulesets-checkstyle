@@ -140,6 +140,11 @@
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-project-info-reports-plugin</artifactId>
+					<version>${plugins.maven.maven-project-info-reports-plugin}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-release-plugin</artifactId>
 					<version>${plugins.maven.maven-release-plugin}</version>
 				</plugin>
@@ -444,6 +449,7 @@
 		<plugins.maven.maven-install-plugin>3.0.0-M1</plugins.maven.maven-install-plugin>
 		<plugins.maven.maven-jar-plugin>3.2.0</plugins.maven.maven-jar-plugin>
 		<plugins.maven.maven-javadoc-plugin>3.2.0</plugins.maven.maven-javadoc-plugin>
+		<plugins.maven.maven-project-info-reports-plugin>3.0.0</plugins.maven.maven-project-info-reports-plugin>
 		<plugins.maven.maven-release-plugin>3.0.0-M1</plugins.maven.maven-release-plugin>
 		<plugins.maven.maven-remote-resources-plugin>1.7.0</plugins.maven.maven-remote-resources-plugin>
 		<plugins.maven.maven-repository-plugin>2.4</plugins.maven.maven-repository-plugin>
