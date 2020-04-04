@@ -100,6 +100,11 @@
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-help-plugin</artifactId>
+					<version>${plugins.maven.maven-help-plugin}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-install-plugin</artifactId>
 					<version>2.5.2</version>
 				</plugin>
@@ -374,6 +379,7 @@
 		<!-- plugin versions -->
 		<plugins.github.ekryd.sortpom-maven-plugin>2.11.0</plugins.github.ekryd.sortpom-maven-plugin>
 		<plugins.maven.maven-enforcer-plugin>3.0.0-M3</plugins.maven.maven-enforcer-plugin>
+		<plugins.maven.maven-help-plugin>3.2.0</plugins.maven.maven-help-plugin>
 		<plugins.maven.maven-site-plugin>3.9.0</plugins.maven.maven-site-plugin>
 		<plugins.takari.maven>0.7.7</plugins.takari.maven>
 		<!-- JPMS -->
