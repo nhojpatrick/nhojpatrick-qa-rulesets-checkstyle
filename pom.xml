@@ -106,7 +106,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-install-plugin</artifactId>
-					<version>2.5.2</version>
+					<version>${plugins.maven.maven-install-plugin}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -385,6 +385,7 @@
 		<plugins.maven.maven-enforcer-plugin>3.0.0-M3</plugins.maven.maven-enforcer-plugin>
 		<plugins.maven.maven-gpg-plugin>1.6</plugins.maven.maven-gpg-plugin>
 		<plugins.maven.maven-help-plugin>3.2.0</plugins.maven.maven-help-plugin>
+		<plugins.maven.maven-install-plugin>3.0.0-M1</plugins.maven.maven-install-plugin>
 		<plugins.maven.maven-site-plugin>3.9.0</plugins.maven.maven-site-plugin>
 		<plugins.takari.maven>0.7.7</plugins.takari.maven>
 		<!-- JPMS -->
