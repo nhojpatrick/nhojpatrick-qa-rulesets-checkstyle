@@ -164,6 +164,11 @@
 					<version>${plugins.maven.maven-surefire-report-plugin}</version>
 				</plugin>
 				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-toolchains-plugin</artifactId>
+					<version>${plugins.maven.maven-toolchains-plugin}</version>
+				</plugin>
+				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>build-helper-maven-plugin</artifactId>
 					<version>${plugins.codehaus.build-helper-maven-plugin}</version>
@@ -414,6 +419,7 @@
 		<plugins.maven.maven-stage-plugin>1.0</plugins.maven.maven-stage-plugin>
 		<plugins.maven.maven-surefire-plugin>3.0.0-M4</plugins.maven.maven-surefire-plugin>
 		<plugins.maven.maven-surefire-report-plugin>3.0.0-M4</plugins.maven.maven-surefire-report-plugin>
+		<plugins.maven.maven-toolchains-plugin>3.0.0</plugins.maven.maven-toolchains-plugin>
 		<plugins.sonatype.nexus-staging-maven-plugin>1.6.8</plugins.sonatype.nexus-staging-maven-plugin>
 		<plugins.takari.maven>0.7.7</plugins.takari.maven>
 		<!-- JPMS -->
