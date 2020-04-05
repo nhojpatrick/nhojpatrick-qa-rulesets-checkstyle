@@ -471,6 +471,6 @@
 		<plugins.sonatype.nexus-staging-maven-plugin>1.6.8</plugins.sonatype.nexus-staging-maven-plugin>
 		<plugins.takari.maven>0.7.7</plugins.takari.maven>
 		<!-- JPMS -->
-		<project.Automatic-Module-Name>com.github.nhojpatrick.checkstyle.rules</project.Automatic-Module-Name>
+		<project.Automatic-Module-Name>com.github.nhojpatrick.qa.ruleset.checkstyle</project.Automatic-Module-Name>
 	</properties>
 </project>
