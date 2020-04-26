@@ -1,24 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ruleset comparisonMethod="maven" xmlns="http://mojo.codehaus.org/versions-maven-plugin/rule/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://mojo.codehaus.org/versions-maven-plugin/rule/2.0.0 http://www.mojohaus.org/versions-maven-plugin/xsd/rule-2.0.0.xsd">
-    <rules>
-        <rule groupId="commons-collections" artifactId="commons-collections">
-            <ignoreVersions>
-                <ignoreVersion type="regex">2004.*</ignoreVersion>
-                <ignoreVersion type="regex">2003.*</ignoreVersion>
-            </ignoreVersions>
-        </rule>
-    </rules>
-    <ignoreVersions>
-        <!-- alpha -->
-        <ignoreVersion type="regex">.*-alpha[-]?[0-9]+$</ignoreVersion>
-        <!-- beta -->
-        <ignoreVersion type="regex">.*[\.-]?[bB]eta[\.]?[0-9]*$</ignoreVersion>
-        <!-- dev -->
-        <ignoreVersion type="regex">.*-dev</ignoreVersion>
-        <!-- release candidates -->
-        <ignoreVersion type="regex">.*-M[0-9]*$</ignoreVersion>
-        <ignoreVersion type="regex">.*-RC[0-9]*$</ignoreVersion>
-        <!-- werid ones -->
-        <ignoreVersion type="regex">.*[.]pr[0-9]*$</ignoreVersion>
-    </ignoreVersions>
+	<rules>
+		<rule groupId="commons-collections" artifactId="commons-collections">
+			<ignoreVersions>
+				<ignoreVersion type="regex">2004.*</ignoreVersion>
+				<ignoreVersion type="regex">2003.*</ignoreVersion>
+			</ignoreVersions>
+		</rule>
+	</rules>
+	<ignoreVersions>
+		<!-- alpha -->
+		<ignoreVersion type="regex">.*-alpha[-]?[0-9]+$</ignoreVersion>
+		<!-- beta -->
+		<ignoreVersion type="regex">.*[\.-]?[bB]eta[\.]?[0-9]*$</ignoreVersion>
+		<!-- dev -->
+		<ignoreVersion type="regex">.*-dev</ignoreVersion>
+		<!-- werid ones -->
+		<ignoreVersion type="regex">.*[.]pr[0-9]*$</ignoreVersion>
+	</ignoreVersions>
 </ruleset>
