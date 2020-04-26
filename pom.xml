@@ -142,11 +142,6 @@
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-jarsigner-plugin</artifactId>
-					<version>${plugins.maven.maven-jarsigner-plugin}</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-javadoc-plugin</artifactId>
 					<version>${plugins.maven.maven-javadoc-plugin}</version>
 					<configuration>
@@ -165,11 +160,6 @@
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-remote-resources-plugin</artifactId>
-					<version>${plugins.maven.maven-remote-resources-plugin}</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-repository-plugin</artifactId>
 					<version>${plugins.maven.maven-repository-plugin}</version>
 				</plugin>
@@ -177,16 +167,6 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-resources-plugin</artifactId>
 					<version>${plugins.maven.maven-resources-plugin}</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-scm-plugin</artifactId>
-					<version>${plugins.maven.maven-scm-plugin}</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-scm-publish-plugin</artifactId>
-					<version>${plugins.maven.maven-scm-publish-plugin}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -200,18 +180,8 @@
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-stage-plugin</artifactId>
-					<version>${plugins.maven.maven-stage-plugin}</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>${plugins.maven.maven-surefire-plugin}</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-surefire-report-plugin</artifactId>
-					<version>${plugins.maven.maven-surefire-report-plugin}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
@@ -470,11 +440,9 @@
 		<plugins.maven.maven-help-plugin>3.2.0</plugins.maven.maven-help-plugin>
 		<plugins.maven.maven-install-plugin>3.0.0-M1</plugins.maven.maven-install-plugin>
 		<plugins.maven.maven-jar-plugin>3.2.0</plugins.maven.maven-jar-plugin>
-		<plugins.maven.maven-jarsigner-plugin>3.0.0</plugins.maven.maven-jarsigner-plugin>
 		<plugins.maven.maven-javadoc-plugin>3.2.0</plugins.maven.maven-javadoc-plugin>
 		<plugins.maven.maven-project-info-reports-plugin>3.1.1</plugins.maven.maven-project-info-reports-plugin>
 		<plugins.maven.maven-release-plugin>3.0.0-M1</plugins.maven.maven-release-plugin>
-		<plugins.maven.maven-remote-resources-plugin>1.7.0</plugins.maven.maven-remote-resources-plugin>
 		<plugins.maven.maven-repository-plugin>2.4</plugins.maven.maven-repository-plugin>
 		<plugins.maven.maven-resources-plugin>3.2.0</plugins.maven.maven-resources-plugin>
 		<plugins.maven.maven-scm-plugin>1.11.2</plugins.maven.maven-scm-plugin>
