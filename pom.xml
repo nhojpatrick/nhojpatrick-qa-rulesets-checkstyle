@@ -360,7 +360,7 @@
 				<downloadJavadocs>false</downloadJavadocs>
 				<downloadSources>false</downloadSources>
 				<!--suppress UnresolvedMavenProperty -->
-				<maven.version.rules>file:///${session.executionRootDirectory}/src/main/resources/com/github/nhojpatrick/qa/versions/rules/rules.xml</maven.version.rules>
+				<maven.version.rules>file:///${session.executionRootDirectory}/src/main/resources/com/github/nhojpatrick/qa/versions/rules.xml</maven.version.rules>
 				<sort.skip>true</sort.skip>
 			</properties>
 		</profile>
