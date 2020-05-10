@@ -328,7 +328,7 @@
 				<sort.pomFile>pom.xml</sort.pomFile>
 				<sort.sortDependencies>groupId,artifactId,version,scope</sort.sortDependencies>
 				<sort.sortModules>true</sort.sortModules>
-				<sort.sortOrderFile>src/main/resources/com/github/nhojpatrick/qa/sortpom/sortorderfile/sortorderfile.xml</sort.sortOrderFile>
+				<sort.sortOrderFile>src/main/resources/com/github/nhojpatrick/qa/sortpom/sortorderfile.xml</sort.sortOrderFile>
 				<sort.sortPlugins>groupId,artifactId,version,scope</sort.sortPlugins>
 				<sort.sortProperties>false</sort.sortProperties>
 			</properties>
