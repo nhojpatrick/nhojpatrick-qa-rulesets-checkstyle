@@ -441,7 +441,7 @@
 		<project.build.sourceEncoding>${project.custom.encoding}</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>${project.custom.encoding}</project.reporting.outputEncoding>
 		<!-- plugin versions -->
-		<plugins.codehaus.build-helper-maven-plugin>3.0.0</plugins.codehaus.build-helper-maven-plugin>
+		<plugins.codehaus.build-helper-maven-plugin>3.2.0</plugins.codehaus.build-helper-maven-plugin>
 		<plugins.codehaus.versions-maven-plugin>2.8.1</plugins.codehaus.versions-maven-plugin>
 		<plugins.github.ekryd.sortpom-maven-plugin>2.12.0</plugins.github.ekryd.sortpom-maven-plugin>
 		<plugins.maven.maven-clean-plugin>3.1.0</plugins.maven.maven-clean-plugin>
