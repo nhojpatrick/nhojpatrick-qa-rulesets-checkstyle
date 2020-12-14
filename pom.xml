@@ -443,7 +443,7 @@
 		<!-- plugin versions -->
 		<plugins.codehaus.build-helper-maven-plugin>3.0.0</plugins.codehaus.build-helper-maven-plugin>
 		<plugins.codehaus.versions-maven-plugin>2.8.1</plugins.codehaus.versions-maven-plugin>
-		<plugins.github.ekryd.sortpom-maven-plugin>2.11.0</plugins.github.ekryd.sortpom-maven-plugin>
+		<plugins.github.ekryd.sortpom-maven-plugin>2.12.0</plugins.github.ekryd.sortpom-maven-plugin>
 		<plugins.maven.maven-clean-plugin>3.1.0</plugins.maven.maven-clean-plugin>
 		<plugins.maven.maven-compiler-plugin>3.8.1</plugins.maven.maven-compiler-plugin>
 		<plugins.maven.maven-dependency-plugin>3.1.2</plugins.maven.maven-dependency-plugin>
