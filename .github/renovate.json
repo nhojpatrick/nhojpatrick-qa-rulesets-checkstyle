@@ -5,5 +5,7 @@
   "dependencyDashboard": true,
   "excludeCommitPaths": ["relocation_**"],
   "labels": ["dependencies"],
-  "prHourlyLimit": 0
+  "prHourlyLimit": 0,
+  "separateMinorPatch": true,
+  "separateMultipleMajor": true
 }
