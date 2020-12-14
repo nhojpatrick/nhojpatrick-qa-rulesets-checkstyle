@@ -467,7 +467,7 @@
 		<plugins.maven.maven-source-plugin>3.2.1</plugins.maven.maven-source-plugin>
 		<plugins.maven.maven-stage-plugin>1.0</plugins.maven.maven-stage-plugin>
 		<plugins.maven.maven-surefire-plugin>3.0.0-M4</plugins.maven.maven-surefire-plugin>
-		<plugins.maven.maven-surefire-report-plugin>3.0.0-M4</plugins.maven.maven-surefire-report-plugin>
+		<plugins.maven.maven-surefire-report-plugin>3.0.0-M5</plugins.maven.maven-surefire-report-plugin>
 		<plugins.maven.maven-toolchains-plugin>3.0.0</plugins.maven.maven-toolchains-plugin>
 		<plugins.sonatype.nexus-staging-maven-plugin>1.6.8</plugins.sonatype.nexus-staging-maven-plugin>
 		<plugins.takari.maven>0.7.7</plugins.takari.maven>
