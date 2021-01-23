@@ -3,10 +3,7 @@
     "config:base"
   ],
   "dependencyDashboard": true,
-  "excludeCommitPaths": [
-    "relocation_com.github.nhojpatrick.checkstyle_nhojpatrick-checkstyle-rules/**",
-    "relocation_com.github.nhojpatrick.qa_nhojpatrick-checkstyle-rules/**"
-  ],
+  "excludeCommitPaths": ["relocation_**"],
   "labels": ["dependencies"],
   "additionalReviewers" : ["nhojpatrick"],
   "prHourlyLimit": 0,
