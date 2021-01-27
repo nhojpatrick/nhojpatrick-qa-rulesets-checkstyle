@@ -9,6 +9,7 @@
   ],
   "labels": ["dependencies"],
   "additionalReviewers" : ["nhojpatrick"],
+  "reviewers" : ["nhojpatrick"],
   "prHourlyLimit": 0,
   "separateMinorPatch": true,
   "separateMultipleMajor": true
