@@ -84,6 +84,39 @@ commands:
           </toolchains>
           EOF
 
+  setup_for_openjdk_16:
+    description: "Setup for OpenJdk 16"
+    steps:
+      - run: mkdir ~/.m2
+      - run: |
+          cat > ~/.m2/toolchains.xml \<< EOF
+          <?xml version="1.0" encoding="UTF-8"?>
+          <toolchains xmlns="http://maven.apache.org/TOOLCHAINS/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/TOOLCHAINS/1.1.0 http://maven.apache.org/xsd/toolchains-1.1.0.xsd">
+            <toolchain>
+              <type>jdk</type>
+              <provides>
+                <version>1.8</version>
+                <vendor>openjdk</vendor>
+                <id>openjdk-1.8</id>
+              </provides>
+              <configuration>
+                <jdkHome>/usr/local/openjdk-16</jdkHome>
+              </configuration>
+            </toolchain>
+            <toolchain>
+              <type>jdk</type>
+              <provides>
+                <version>11</version>
+                <vendor>openjdk</vendor>
+                <id>openjdk-11</id>
+              </provides>
+              <configuration>
+                <jdkHome>/usr/local/openjdk-16</jdkHome>
+              </configuration>
+            </toolchain>
+          </toolchains>
+          EOF
+
   std_mvnw_jdk8:
     description: "Standard JDK8 mvnw steps"
     steps:
@@ -122,6 +155,31 @@ commands:
           command: ./mvnw -Pcicd clean install -DskipTests
       - run:
           name: "Maven Jdk11 Tests"
+          command: ./mvnw -Pcicd test
+      - run:
+          name: "Tidy Cache before save"
+          command: rm -rf ~/.m2/repository/com/github/nhojpatrick
+          when: always
+      - save_cache:
+          key: m2-dependencies-{{ checksum "pom.xml" }}
+          paths:
+            - ~/.m2/repository
+            - ~/.m2/wrapper
+          when: always
+
+  std_mvnw_jdk16:
+    description: "Standard JDK16 mvnw steps"
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - m2-dependencies-{{ checksum "pom.xml" }}
+            - m2-dependencies-
+      - run:
+          name: "Maven Jdk16 Clean Install SkipTests"
+          command: ./mvnw -Pcicd clean install -DskipTests
+      - run:
+          name: "Maven Jdk16 Tests"
           command: ./mvnw -Pcicd test
       - run:
           name: "Tidy Cache before save"
@@ -246,6 +304,13 @@ jobs:
       - setup_for_openjdk_11
       - std_mvnw_jdk11
 
+  jdk16:
+    docker:
+      - image: cimg/openjdk:16.0
+    steps:
+      - setup_for_openjdk_16
+      - std_mvnw_jdk16
+
   checkstyle:
     docker:
       - image: cimg/openjdk:8.0
@@ -284,10 +349,12 @@ workflows:
     jobs:
       - jdk8
       - jdk11
+      - jdk16
       - builds_passed:
           requires:
             - jdk8
             - jdk11
+            - jdk16
       - qa_passed:
           requires:
             - checkstyle
