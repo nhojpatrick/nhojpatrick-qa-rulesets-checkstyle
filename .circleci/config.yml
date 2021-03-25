@@ -246,12 +246,6 @@ jobs:
       - setup_for_openjdk_11
       - std_mvnw_jdk11
 
-  jdk13:
-    docker:
-      - image: circleci/openjdk:13-jdk-buster
-    steps:
-      - std_mvnw_jdk11
-
   jdk14:
     docker:
       - image: circleci/openjdk:14-jdk-buster
@@ -296,13 +290,11 @@ workflows:
     jobs:
       - jdk8
       - jdk11
-      #- jdk13
       #- jdk14
       - builds_passed:
           requires:
             - jdk8
             - jdk11
-            #- jdk13
             #- jdk14
       - qa_passed:
           requires:
