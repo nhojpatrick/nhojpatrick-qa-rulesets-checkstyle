@@ -233,7 +233,7 @@ jobs:
 
   jdk8:
     docker:
-      - image: circleci/openjdk:8-jdk-stretch
+      - image: cimg/openjdk:8.0
     steps:
       - install_openjdk_11
       - setup_for_openjdk_8_11
@@ -260,7 +260,7 @@ jobs:
 
   checkstyle:
     docker:
-      - image: circleci/openjdk:8-jdk-stretch
+      - image: cimg/openjdk:8.0
     steps:
       - install_openjdk_11
       - setup_for_openjdk_8_11
@@ -268,7 +268,7 @@ jobs:
 
   javadoc:
     docker:
-      - image: circleci/openjdk:8-jdk-stretch
+      - image: cimg/openjdk:8.0
     steps:
       - install_openjdk_11
       - setup_for_openjdk_8_11
@@ -276,7 +276,7 @@ jobs:
 
   pmd:
     docker:
-      - image: circleci/openjdk:8-jdk-stretch
+      - image: cimg/openjdk:8.0
     steps:
       - install_openjdk_11
       - setup_for_openjdk_8_11
@@ -284,7 +284,7 @@ jobs:
 
   spotbugs:
     docker:
-      - image: circleci/openjdk:8-jdk-stretch
+      - image: cimg/openjdk:8.0
     steps:
       - install_openjdk_11
       - setup_for_openjdk_8_11
