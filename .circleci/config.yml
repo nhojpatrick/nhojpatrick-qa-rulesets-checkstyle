@@ -84,8 +84,8 @@ commands:
           </toolchains>
           EOF
 
-  setup_for_openjdk_16:
-    description: "Setup for OpenJdk 16"
+  setup_openjdk_17_toolchain:
+    description: "Setup ToolChain for OpenJdk 17"
     steps:
       - run: mkdir ~/.m2
       - run: |
@@ -100,7 +100,7 @@ commands:
                 <id>openjdk-1.8</id>
               </provides>
               <configuration>
-                <jdkHome>/usr/local/jdk-16.0.0</jdkHome>
+                <jdkHome>/usr/local/jdk-17.0.0</jdkHome>
               </configuration>
             </toolchain>
             <toolchain>
@@ -111,7 +111,7 @@ commands:
                 <id>openjdk-11</id>
               </provides>
               <configuration>
-                <jdkHome>/usr/local/jdk-16.0.0</jdkHome>
+                <jdkHome>/usr/local/jdk-17.0.0</jdkHome>
               </configuration>
             </toolchain>
           </toolchains>
@@ -167,8 +167,8 @@ commands:
             - ~/.m2/wrapper
           when: always
 
-  std_mvnw_jdk16:
-    description: "Standard JDK16 mvnw steps"
+  std_mvnw_jdk17:
+    description: "Standard Jdk17 mvnw steps"
     steps:
       - checkout
       - restore_cache:
@@ -176,10 +176,10 @@ commands:
             - m2-dependencies-{{ checksum "pom.xml" }}
             - m2-dependencies-
       - run:
-          name: "Maven Jdk16 Clean Install SkipTests"
+          name: "Maven Jdk17 Clean Install SkipTests"
           command: ./mvnw -Pcicd clean install -DskipTests
       - run:
-          name: "Maven Jdk16 Tests"
+          name: "Maven Jdk17 Tests"
           command: ./mvnw -Pcicd test
       - run:
           name: "Tidy Cache before save"
@@ -304,12 +304,12 @@ jobs:
       - setup_for_openjdk_11
       - std_mvnw_jdk11
 
-  jdk16:
+  jdk17:
     docker:
-      - image: cimg/openjdk:16.0
+      - image: cimg/openjdk:17.0
     steps:
-      - setup_for_openjdk_16
-      - std_mvnw_jdk16
+      - setup_openjdk_17_toolchain
+      - std_mvnw_jdk17
 
   checkstyle:
     docker:
@@ -349,12 +349,12 @@ workflows:
     jobs:
       - jdk8
       - jdk11
-      - jdk16
+      - jdk17
       - builds_passed:
           requires:
             - jdk8
             - jdk11
-            - jdk16
+            - jdk17
       - qa_passed:
           requires:
             - checkstyle
