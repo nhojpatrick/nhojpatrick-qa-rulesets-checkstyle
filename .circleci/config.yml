@@ -18,8 +18,8 @@ commands:
       - run: tar xvf ~/openjdk-11.tar.gz -C ~/
       - run: sudo mv ~/jdk-11.0.2 /usr/local/openjdk-11
 
-  setup_for_openjdk_8_11:
-    description: "Setup for OpenJdk 8 and 11"
+  setup_std_toolchain:
+    description: "Setup ToolChain for multiple OpenJdk versions"
     steps:
       - run: mkdir ~/.m2
       - run: |
@@ -51,8 +51,8 @@ commands:
           </toolchains>
           EOF
 
-  setup_for_openjdk_11:
-    description: "Setup for OpenJdk 11"
+  setup_openjdk_11_toolchain:
+    description: "Setup ToolChain for OpenJdk 11"
     steps:
       - run: mkdir ~/.m2
       - run: |
@@ -277,13 +277,13 @@ commands:
           when: always
 
 jobs:
-  builds_passed:
+  passed_builds:
     machine:
       image: circleci/classic:latest
     steps:
       - run: echo "Build Passed"
 
-  qa_passed:
+  passed_qa:
     machine:
       image: circleci/classic:latest
     steps:
@@ -294,14 +294,14 @@ jobs:
       - image: cimg/openjdk:8.0
     steps:
       - install_openjdk_11
-      - setup_for_openjdk_8_11
+      - setup_std_toolchain
       - std_mvnw_jdk8
 
   jdk11:
     docker:
       - image: cimg/openjdk:11.0
     steps:
-      - setup_for_openjdk_11
+      - setup_openjdk_11_toolchain
       - std_mvnw_jdk11
 
   jdk17:
@@ -316,7 +316,7 @@ jobs:
       - image: cimg/openjdk:8.0
     steps:
       - install_openjdk_11
-      - setup_for_openjdk_8_11
+      - setup_std_toolchain
       - qa_checkstyle
 
   javadoc:
@@ -324,7 +324,7 @@ jobs:
       - image: cimg/openjdk:8.0
     steps:
       - install_openjdk_11
-      - setup_for_openjdk_8_11
+      - setup_std_toolchain
       - qa_javadoc
 
   pmd:
@@ -332,7 +332,7 @@ jobs:
       - image: cimg/openjdk:8.0
     steps:
       - install_openjdk_11
-      - setup_for_openjdk_8_11
+      - setup_std_toolchain
       - qa_pmd
 
   spotbugs:
@@ -340,7 +340,7 @@ jobs:
       - image: cimg/openjdk:8.0
     steps:
       - install_openjdk_11
-      - setup_for_openjdk_8_11
+      - setup_std_toolchain
       - qa_spotbugs
 
 workflows:
@@ -350,12 +350,12 @@ workflows:
       - jdk8
       - jdk11
       - jdk17
-      - builds_passed:
+      - passed_builds:
           requires:
             - jdk8
             - jdk11
             - jdk17
-      - qa_passed:
+      - passed_qa:
           requires:
             - checkstyle
             - javadoc
@@ -363,7 +363,7 @@ workflows:
             - spotbugs
       - checkstyle:
           requires:
-            - builds_passed
+            - passed_builds
           filters:
             branches:
               ignore:
@@ -371,7 +371,7 @@ workflows:
                 - master
       - javadoc:
           requires:
-            - builds_passed
+            - passed_builds
           filters:
             branches:
               ignore:
@@ -379,7 +379,7 @@ workflows:
                 - master
       - pmd:
           requires:
-            - builds_passed
+            - passed_builds
           filters:
             branches:
               ignore:
@@ -387,7 +387,7 @@ workflows:
                 - master
       - spotbugs:
           requires:
-            - builds_passed
+            - passed_builds
           filters:
             branches:
               ignore:
