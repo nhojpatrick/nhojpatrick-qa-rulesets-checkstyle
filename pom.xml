@@ -49,7 +49,7 @@
 		<url>https://github.com/nhojpatrick/nhojpatrick-qa-ruleset-checkstyle/tree/master</url>
 	</scm>
 	<!--organization / -->
-	<!--build /-->
+	<!--build / -->
 	<build>
 		<pluginManagement>
 			<plugins>
