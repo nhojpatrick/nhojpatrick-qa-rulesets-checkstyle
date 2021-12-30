@@ -412,6 +412,7 @@
 	<!--properties / -->
 	<properties>
 		<!-- custom properties -->
+		<project.Automatic-Module-Name>com.github.nhojpatrick.qa.ruleset.checkstyle</project.Automatic-Module-Name>
 		<project.custom.encoding>UTF-8</project.custom.encoding>
 		<project.custom.java.version>1.8</project.custom.java.version>
 		<!-- maven user properties -->
@@ -456,6 +457,5 @@
 		<plugins.sonatype.nexus-staging-maven-plugin>1.6.8</plugins.sonatype.nexus-staging-maven-plugin>
 		<plugins.takari.maven>0.7.7</plugins.takari.maven>
 		<!-- JPMS -->
-		<project.Automatic-Module-Name>com.github.nhojpatrick.qa.ruleset.checkstyle</project.Automatic-Module-Name>
 	</properties>
 </project>
