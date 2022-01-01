@@ -1,7 +1,7 @@
 # Checkstyle Custom Configuration
 
 ![GitHub](https://img.shields.io/github/license/nhojpatrick/nhojpatrick-qa-ruleset-checkstyle?style=plastic)
-![Maven Central](https://img.shields.io/maven-central/v/com.github.nhojpatrick.qa/nhojpatrick-qa-ruleset-checkstyle?style=plastic)](https://search.maven.org/artifact/com.github.nhojpatrick.qa/nhojpatrick-qa-ruleset-checkstyle)
+[![Maven Central](https://img.shields.io/maven-central/v/com.github.nhojpatrick.qa/nhojpatrick-qa-ruleset-checkstyle?style=plastic)](https://search.maven.org/artifact/com.github.nhojpatrick.qa/nhojpatrick-qa-ruleset-checkstyle)
 [![CircleCI](https://img.shields.io/circleci/build/github/nhojpatrick/nhojpatrick-qa-ruleset-checkstyle/develop?label=circleci&style=plastic)](https://circleci.com/gh/nhojpatrick/nhojpatrick-qa-ruleset-checkstyle/tree/develop)
 [![Coverage Status](https://coveralls.io/repos/github/nhojpatrick/nhojpatrick-qa-ruleset-checkstyle/badge.svg?branch=develop)](https://coveralls.io/github/nhojpatrick/nhojpatrick-qa-ruleset-checkstyle?branch=develop)
 [![Known Vulnerabilities](https://snyk.io/test/github/nhojpatrick/nhojpatrick-qa-ruleset-pmd/develop/badge.svg)](https://snyk.io/test/github/nhojpatrick/nhojpatrick-qa-ruleset-checkstyle/develop)
