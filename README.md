@@ -5,6 +5,7 @@
 [![CircleCI](https://img.shields.io/circleci/build/github/nhojpatrick/nhojpatrick-qa-ruleset-checkstyle/develop?label=circleci&style=plastic)](https://circleci.com/gh/nhojpatrick/nhojpatrick-qa-ruleset-checkstyle/tree/develop)
 [![coveralls](https://img.shields.io/coveralls/github/nhojpatrick/reop/branch?style=plastic)](https://coveralls.io/github/nhojpatrick/nhojpatrick-qa-ruleset-checkstyle?branch=develop)
 [![Known Vulnerabilities](https://snyk.io/test/github/nhojpatrick/nhojpatrick-qa-ruleset-pmd/develop/badge.svg)](https://snyk.io/test/github/nhojpatrick/nhojpatrick-qa-ruleset-checkstyle/develop)
+[![Maintainability](https://api.codeclimate.com/v1/badges/d1ec51a82ee30dac3323/maintainability)](https://codeclimate.com/github/nhojpatrick/nhojpatrick-qa-ruleset-checkstyle/maintainability)
 
 Checkstyle is a static code analysis tool to see if code adheres to 'your'
 coding standing. This project contains custom checkstyle rules.
