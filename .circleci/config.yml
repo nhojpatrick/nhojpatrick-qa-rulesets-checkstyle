@@ -368,6 +368,7 @@ workflows:
             branches:
               ignore:
                 - develop
+                - main
                 - master
       - javadoc:
           requires:
@@ -376,6 +377,7 @@ workflows:
             branches:
               ignore:
                 - develop
+                - main
                 - master
       - pmd:
           requires:
@@ -384,6 +386,7 @@ workflows:
             branches:
               ignore:
                 - develop
+                - main
                 - master
       - spotbugs:
           requires:
@@ -392,4 +395,5 @@ workflows:
             branches:
               ignore:
                 - develop
+                - main
                 - master
