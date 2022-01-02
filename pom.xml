@@ -59,11 +59,6 @@
 					<version>${plugins.com.github.ekryd.sortpom.sortpom-maven-plugin}</version>
 				</plugin>
 				<plugin>
-					<groupId>io.takari</groupId>
-					<artifactId>maven</artifactId>
-					<version>${plugins.takari.maven}</version>
-				</plugin>
-				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-antrun-plugin</artifactId>
 					<version>${plugins.maven.maven-antrun-plugin}</version>
@@ -197,6 +192,11 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-toolchains-plugin</artifactId>
 					<version>${plugins.maven.maven-toolchains-plugin}</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-wrapper-plugin</artifactId>
+					<version>${plugins.maven.maven-wrapper-plugin}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
@@ -380,8 +380,8 @@
 				<defaultGoal>validate</defaultGoal>
 				<plugins>
 					<plugin>
-						<groupId>io.takari</groupId>
-						<artifactId>maven</artifactId>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-wrapper-plugin</artifactId>
 						<executions>
 							<execution>
 								<id>wrapper-latest</id>
@@ -397,6 +397,7 @@
 			<properties>
 				<downloadJavadocs>false</downloadJavadocs>
 				<downloadSources>false</downloadSources>
+				<includeDebug>true</includeDebug>
 				<sort.skip>true</sort.skip>
 			</properties>
 		</profile>
@@ -464,8 +465,8 @@
 		<plugins.maven.maven-surefire-plugin>3.0.0-M5</plugins.maven.maven-surefire-plugin>
 		<plugins.maven.maven-surefire-report-plugin>3.0.0-M5</plugins.maven.maven-surefire-report-plugin>
 		<plugins.maven.maven-toolchains-plugin>3.0.0</plugins.maven.maven-toolchains-plugin>
+		<plugins.maven.maven-wrapper-plugin>3.1.0</plugins.maven.maven-wrapper-plugin>
 		<plugins.sonatype.nexus-staging-maven-plugin>1.6.8</plugins.sonatype.nexus-staging-maven-plugin>
-		<plugins.takari.maven>0.7.7</plugins.takari.maven>
 		<!-- JPMS -->
 	</properties>
 </project>
