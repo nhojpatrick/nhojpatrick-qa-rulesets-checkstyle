@@ -269,8 +269,6 @@
 		<profile>
 			<id>cicd</id>
 			<properties>
-				<downloadJavadocs>false</downloadJavadocs>
-				<downloadSources>false</downloadSources>
 				<sort.skip>true</sort.skip>
 			</properties>
 		</profile>
@@ -304,8 +302,6 @@
 				</plugins>
 			</build>
 			<properties>
-				<downloadJavadocs>false</downloadJavadocs>
-				<downloadSources>false</downloadSources>
 				<sort.skip>true</sort.skip>
 			</properties>
 		</profile>
@@ -367,8 +363,6 @@
 				</plugins>
 			</build>
 			<properties>
-				<downloadJavadocs>false</downloadJavadocs>
-				<downloadSources>false</downloadSources>
 				<!--suppress UnresolvedMavenProperty -->
 				<maven.version.rules>file:///${session.executionRootDirectory}/src/main/resources/com/github/nhojpatrick/qa/versions/rules.xml</maven.version.rules>
 				<sort.skip>true</sort.skip>
@@ -395,8 +389,6 @@
 				</plugins>
 			</build>
 			<properties>
-				<downloadJavadocs>false</downloadJavadocs>
-				<downloadSources>false</downloadSources>
 				<includeDebug>true</includeDebug>
 				<sort.skip>true</sort.skip>
 			</properties>
