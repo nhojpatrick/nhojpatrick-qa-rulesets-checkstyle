@@ -348,8 +348,19 @@ workflows:
   build_all:
     jobs:
       - jdk8
-      - jdk11
-      - jdk17
+      - jdk11:
+          filters:
+            branches:
+              ignore:
+                - develop
+                - main
+      - jdk17:
+          filters:
+            branches:
+              ignore:
+                - develop
+                - main
+
       - passed_builds:
           requires:
             - jdk8
