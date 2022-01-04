@@ -369,7 +369,6 @@ workflows:
               ignore:
                 - develop
                 - main
-                - master
       - javadoc:
           requires:
             - passed_builds
@@ -378,7 +377,6 @@ workflows:
               ignore:
                 - develop
                 - main
-                - master
       - pmd:
           requires:
             - passed_builds
@@ -387,7 +385,6 @@ workflows:
               ignore:
                 - develop
                 - main
-                - master
       - spotbugs:
           requires:
             - passed_builds
@@ -396,4 +393,3 @@ workflows:
               ignore:
                 - develop
                 - main
-                - master
