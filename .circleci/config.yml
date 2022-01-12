@@ -127,7 +127,7 @@ commands:
             - m2-dependencies-
       - run:
           name: "Maven Jdk8 Clean Install"
-          command: ./mvnw -Pcicd clean install
+          command: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd clean install
       - run:
           name: "Maven Jdk8 Build Jdk11 Tests"
           command: export JAVA_HOME=/usr/local/openjdk-11 && export PATH=${JAVA_HOME}/bin:{$PATH} && ./mvnw -Pcicd test
@@ -152,10 +152,10 @@ commands:
             - m2-dependencies-
       - run:
           name: "Maven Jdk11 Clean Install SkipTests"
-          command: ./mvnw -Pcicd clean install -DskipTests
+          command: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd clean install -DskipTests
       - run:
           name: "Maven Jdk11 Tests"
-          command: ./mvnw -Pcicd test
+          command: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd test
       - run:
           name: "Tidy Cache before save"
           command: rm -rf ~/.m2/repository/com/github/nhojpatrick
@@ -177,10 +177,10 @@ commands:
             - m2-dependencies-
       - run:
           name: "Maven Jdk17 Clean Install SkipTests"
-          command: ./mvnw -Pcicd clean install -DskipTests
+          command: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd clean install -DskipTests
       - run:
           name: "Maven Jdk17 Tests"
-          command: ./mvnw -Pcicd test
+          command: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd test
       - run:
           name: "Tidy Cache before save"
           command: rm -rf ~/.m2/repository/com/github/nhojpatrick
