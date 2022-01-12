@@ -130,7 +130,7 @@ commands:
           command: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd clean install
       - run:
           name: "Maven Jdk8 Build Jdk11 Tests"
-          command: export JAVA_HOME=/usr/local/openjdk-11 && export PATH=${JAVA_HOME}/bin:{$PATH} && ./mvnw -Pcicd test
+          command: export JAVA_HOME=/usr/local/openjdk-11 && export PATH=${JAVA_HOME}/bin:{$PATH} && ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd test
       - run:
           name: "Tidy Cache before save"
           command: rm -rf ~/.m2/repository/com/github/nhojpatrick
@@ -201,7 +201,7 @@ commands:
             - m2-dependencies-{{ checksum "pom.xml" }}-checkstyle
             - m2-dependencies-{{ checksum "pom.xml" }}
             - m2-dependencies-
-      - run: ./mvnw -Pcicd,qa_checkstyle -DskipTests verify
+      - run: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd,qa_checkstyle -DskipTests verify
       - run:
           name: "Tidy Cache before save"
           command: rm -rf ~/.m2/repository/com/github/nhojpatrick
@@ -222,7 +222,7 @@ commands:
             - m2-dependencies-{{ checksum "pom.xml" }}-javadoc
             - m2-dependencies-{{ checksum "pom.xml" }}
             - m2-dependencies-
-      - run: ./mvnw -Pcicd,qa_javadoc -DskipTests verify
+      - run: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd,qa_javadoc -DskipTests verify
       - run:
           name: "Tidy Cache before save"
           command: rm -rf ~/.m2/repository/com/github/nhojpatrick
@@ -243,7 +243,7 @@ commands:
             - m2-dependencies-{{ checksum "pom.xml" }}-pmd
             - m2-dependencies-{{ checksum "pom.xml" }}
             - m2-dependencies-
-      - run: ./mvnw -Pcicd,qa_pmd -DskipTests verify
+      - run: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd,qa_pmd -DskipTests verify
       - run:
           name: "Tidy Cache before save"
           command: rm -rf ~/.m2/repository/com/github/nhojpatrick
@@ -264,7 +264,7 @@ commands:
             - m2-dependencies-{{ checksum "pom.xml" }}-spotbugs
             - m2-dependencies-{{ checksum "pom.xml" }}
             - m2-dependencies-
-      - run: ./mvnw -Pcicd,qa_spotbugs -DskipTests verify
+      - run: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd,qa_spotbugs -DskipTests verify
       - run:
           name: "Tidy Cache before save"
           command: rm -rf ~/.m2/repository/com/github/nhojpatrick
