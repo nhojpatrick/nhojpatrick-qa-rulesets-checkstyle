@@ -269,7 +269,7 @@
 				<directory>src/main/resources</directory>
 				<excludes>
 					<exclude>com/github/nhojpatrick/qa/sortpom/sortorderfile**</exclude>
-					<exclude>com/github/nhojpatrick/qa/versions/rules**</exclude>
+					<exclude>com/github/nhojpatrick/qa/versions/ruleset**</exclude>
 				</excludes>
 			</resource>
 		</resources>
@@ -374,7 +374,7 @@
 			</build>
 			<properties>
 				<!--suppress UnresolvedMavenProperty -->
-				<maven.version.rules>file:///${session.executionRootDirectory}/src/main/resources/com/github/nhojpatrick/qa/versions/rules.xml</maven.version.rules>
+				<maven.version.rules>file:///${session.executionRootDirectory}/src/main/resources/com/github/nhojpatrick/qa/versions/ruleset/rules.xml</maven.version.rules>
 				<sort.skip>true</sort.skip>
 			</properties>
 		</profile>
