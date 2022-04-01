@@ -57,6 +57,12 @@
 					<groupId>com.amashchenko.maven.plugin</groupId>
 					<artifactId>gitflow-maven-plugin</artifactId>
 					<version>${plugins.com.amashchenko.maven.plugin.gitflow-maven-plugin}</version>
+					<configuration>
+						<gitFlowConfig>
+							<developmentBranch>develop</developmentBranch>
+							<productionBranch>main</productionBranch>
+						</gitFlowConfig>
+					</configuration>
 				</plugin>
 				<plugin>
 					<groupId>com.github.ekryd.sortpom</groupId>
