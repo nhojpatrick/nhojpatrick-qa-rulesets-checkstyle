@@ -66,8 +66,8 @@
 						</gitFlowConfig>
 						<commitMessagePrefix xml:space="preserve">[gitflow] </commitMessagePrefix>
 						<commitMessages>
-							<releaseFinishMessage>Development v${version}</releaseFinishMessage>
-							<releaseStartMessage>Release v${version}</releaseStartMessage>
+							<releaseFinishMessage>Development v@{version}</releaseFinishMessage>
+							<releaseStartMessage>Release v@{version}</releaseStartMessage>
 						</commitMessages>
 					</configuration>
 				</plugin>
