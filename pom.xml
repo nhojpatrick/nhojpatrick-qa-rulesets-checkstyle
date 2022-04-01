@@ -63,6 +63,11 @@
 							<productionBranch>main</productionBranch>
 							<versionTagPrefix>v</versionTagPrefix>
 						</gitFlowConfig>
+						<commitMessagePrefix xml:space="preserve">[gitflow] </commitMessagePrefix>
+						<commitMessages>
+							<releaseFinishMessage>Development v${version}</releaseFinishMessage>
+							<releaseStartMessage>Release v${version}</releaseStartMessage>
+						</commitMessages>
 					</configuration>
 				</plugin>
 				<plugin>
