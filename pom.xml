@@ -197,11 +197,6 @@
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-surefire-report-plugin</artifactId>
-					<version>${plugins.maven.maven-surefire-report-plugin}</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-toolchains-plugin</artifactId>
 					<version>${plugins.maven.maven-toolchains-plugin}</version>
 				</plugin>
@@ -451,7 +446,6 @@
 		<plugins.maven.maven-site-plugin>3.11.0</plugins.maven.maven-site-plugin>
 		<plugins.maven.maven-source-plugin>3.2.1</plugins.maven.maven-source-plugin>
 		<plugins.maven.maven-surefire-plugin>3.0.0-M5</plugins.maven.maven-surefire-plugin>
-		<plugins.maven.maven-surefire-report-plugin>3.0.0-M5</plugins.maven.maven-surefire-report-plugin>
 		<plugins.maven.maven-toolchains-plugin>3.0.0</plugins.maven.maven-toolchains-plugin>
 		<plugins.maven.maven-wrapper-plugin>3.1.0</plugins.maven.maven-wrapper-plugin>
 		<plugins.sonatype.nexus-staging-maven-plugin>1.6.12</plugins.sonatype.nexus-staging-maven-plugin>
