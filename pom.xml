@@ -376,8 +376,8 @@
 								<phase>validate</phase>
 								<goals>
 									<goal>display-parent-updates</goal>
-									<goal>display-dependency-updates</goal>
 									<goal>display-plugin-updates</goal>
+									<goal>display-dependency-updates</goal>
 									<goal>display-property-updates</goal>
 								</goals>
 							</execution>
