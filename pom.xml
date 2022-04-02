@@ -376,8 +376,6 @@
 				</plugins>
 			</build>
 			<properties>
-				<!--suppress UnresolvedMavenProperty -->
-				<maven.version.rules>file:///${session.executionRootDirectory}/src/main/resources/com/github/nhojpatrick/qa/versions/ruleset/rules.xml</maven.version.rules>
 				<sort.skip>true</sort.skip>
 			</properties>
 		</profile>
@@ -478,6 +476,9 @@
 		<sort.sortOrderFile>src/main/resources/com/github/nhojpatrick/qa/sortpom/sortorderfile/sortorderfile.xml</sort.sortOrderFile>
 		<sort.sortPlugins>groupId,artifactId,version,scope</sort.sortPlugins>
 		<sort.sortProperties>false</sort.sortProperties>
+		<!-- versions-maven-plugin -->
+		<!--suppress UnresolvedMavenProperty -->
+		<maven.version.rules>file:///${session.executionRootDirectory}/src/main/resources/com/github/nhojpatrick/qa/versions/ruleset/rules.xml</maven.version.rules>
 		<!-- JPMS -->
 	</properties>
 </project>
