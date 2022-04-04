@@ -436,7 +436,7 @@
 		<plugins.codehaus.versions-maven-plugin>2.10.0</plugins.codehaus.versions-maven-plugin>
 		<plugins.com.amashchenko.maven.plugin.gitflow-maven-plugin>1.18.0</plugins.com.amashchenko.maven.plugin.gitflow-maven-plugin>
 		<plugins.com.github.ekryd.sortpom.sortpom-maven-plugin>3.0.1</plugins.com.github.ekryd.sortpom.sortpom-maven-plugin>
-		<plugins.maven.maven-clean-plugin>3.1.0</plugins.maven.maven-clean-plugin>
+		<plugins.maven.maven-clean-plugin>3.2.0</plugins.maven.maven-clean-plugin>
 		<plugins.maven.maven-compiler-plugin>3.10.1</plugins.maven.maven-compiler-plugin>
 		<plugins.maven.maven-dependency-plugin>3.3.0</plugins.maven.maven-dependency-plugin>
 		<plugins.maven.maven-deploy-plugin>3.0.0-M2</plugins.maven.maven-deploy-plugin>
