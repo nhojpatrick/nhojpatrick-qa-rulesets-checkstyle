@@ -93,3 +93,6 @@ To use checkstyle the following best practice is suggested, with these notes;
 	</properties>
 </project>
 ```
+
+## Releasing
+See [RELEASE.md](./RELEASE.md).
