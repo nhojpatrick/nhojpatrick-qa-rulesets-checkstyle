@@ -1,4 +1,4 @@
 /**
  * Custom configuration for maven-checkstyle-plugin.
  */
-package com.github.nhojpatrick.checkstyle.rules;
+package com.github.nhojpatrick.qa.ruleset.checkstyle;
