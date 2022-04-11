@@ -289,6 +289,9 @@
 			</properties>
 		</profile>
 		<profile>
+			<id>deployableArtifacts</id>
+		</profile>
+		<profile>
 			<id>release</id>
 			<build>
 				<defaultGoal>gitflow:release</defaultGoal>
