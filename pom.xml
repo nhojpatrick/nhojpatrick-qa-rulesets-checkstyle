@@ -496,7 +496,7 @@
 		<plugins.maven.maven-surefire-plugin>3.0.0-M6</plugins.maven.maven-surefire-plugin>
 		<plugins.maven.maven-toolchains-plugin>3.0.0</plugins.maven.maven-toolchains-plugin>
 		<plugins.maven.maven-wrapper-plugin>3.1.0</plugins.maven.maven-wrapper-plugin>
-		<plugins.sonatype.nexus-staging-maven-plugin>1.6.12</plugins.sonatype.nexus-staging-maven-plugin>
+		<plugins.sonatype.nexus-staging-maven-plugin>1.6.13</plugins.sonatype.nexus-staging-maven-plugin>
 		<!-- sortpom-maven-plugin -->
 		<sort.createBackupFile>false</sort.createBackupFile>
 		<sort.nrOfIndentSpace>-1</sort.nrOfIndentSpace>
