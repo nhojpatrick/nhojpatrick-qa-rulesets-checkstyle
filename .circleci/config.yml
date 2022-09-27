@@ -121,10 +121,6 @@ commands:
     description: "Standard JDK8 mvnw steps"
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - m2-dependencies-{{ checksum "pom.xml" }}
-            - m2-dependencies-
       - run:
           name: "Maven Jdk8 Clean Install"
           command: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd clean install
@@ -135,21 +131,11 @@ commands:
           name: "Tidy Cache before save"
           command: rm -rf ~/.m2/repository/com/github/nhojpatrick
           when: always
-      - save_cache:
-          key: m2-dependencies-{{ checksum "pom.xml" }}
-          paths:
-            - ~/.m2/repository
-            - ~/.m2/wrapper
-          when: always
 
   std_mvnw_jdk11:
     description: "Standard JDK11 mvnw steps"
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - m2-dependencies-{{ checksum "pom.xml" }}
-            - m2-dependencies-
       - run:
           name: "Maven Jdk11 Clean Install SkipTests"
           command: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd clean install -DskipTests
@@ -160,21 +146,11 @@ commands:
           name: "Tidy Cache before save"
           command: rm -rf ~/.m2/repository/com/github/nhojpatrick
           when: always
-      - save_cache:
-          key: m2-dependencies-{{ checksum "pom.xml" }}
-          paths:
-            - ~/.m2/repository
-            - ~/.m2/wrapper
-          when: always
 
   std_mvnw_jdk17:
     description: "Standard Jdk17 mvnw steps"
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - m2-dependencies-{{ checksum "pom.xml" }}
-            - m2-dependencies-
       - run:
           name: "Maven Jdk17 Clean Install SkipTests"
           command: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd clean install -DskipTests
@@ -185,95 +161,45 @@ commands:
           name: "Tidy Cache before save"
           command: rm -rf ~/.m2/repository/com/github/nhojpatrick
           when: always
-      - save_cache:
-          key: m2-dependencies-{{ checksum "pom.xml" }}
-          paths:
-            - ~/.m2/repository
-            - ~/.m2/wrapper
-          when: always
 
   qa_checkstyle:
     description: "Standard mvnw checkstyle"
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - m2-dependencies-{{ checksum "pom.xml" }}-checkstyle
-            - m2-dependencies-{{ checksum "pom.xml" }}
-            - m2-dependencies-
       - run: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd,qa_checkstyle -DskipTests verify
       - run:
           name: "Tidy Cache before save"
           command: rm -rf ~/.m2/repository/com/github/nhojpatrick
-          when: always
-      - save_cache:
-          key: m2-dependencies-{{ checksum "pom.xml" }}-checkstyle
-          paths:
-            - ~/.m2/repository
-            - ~/.m2/wrapper
           when: always
 
   qa_javadoc:
     description: "Standard mvnw javadoc"
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - m2-dependencies-{{ checksum "pom.xml" }}-javadoc
-            - m2-dependencies-{{ checksum "pom.xml" }}
-            - m2-dependencies-
       - run: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd,qa_javadoc -DskipTests verify
       - run:
           name: "Tidy Cache before save"
           command: rm -rf ~/.m2/repository/com/github/nhojpatrick
-          when: always
-      - save_cache:
-          key: m2-dependencies-{{ checksum "pom.xml" }}-javadoc
-          paths:
-            - ~/.m2/repository
-            - ~/.m2/wrapper
           when: always
 
   qa_pmd:
     description: "Standard mvnw pmd"
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - m2-dependencies-{{ checksum "pom.xml" }}-pmd
-            - m2-dependencies-{{ checksum "pom.xml" }}
-            - m2-dependencies-
       - run: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd,qa_pmd -DskipTests verify
       - run:
           name: "Tidy Cache before save"
           command: rm -rf ~/.m2/repository/com/github/nhojpatrick
-          when: always
-      - save_cache:
-          key: m2-dependencies-{{ checksum "pom.xml" }}-pmd
-          paths:
-            - ~/.m2/repository
-            - ~/.m2/wrapper
           when: always
 
   qa_spotbugs:
     description: "Standard mvnw spotbugs"
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - m2-dependencies-{{ checksum "pom.xml" }}-spotbugs
-            - m2-dependencies-{{ checksum "pom.xml" }}
-            - m2-dependencies-
       - run: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd,qa_spotbugs -DskipTests verify
       - run:
           name: "Tidy Cache before save"
           command: rm -rf ~/.m2/repository/com/github/nhojpatrick
-          when: always
-      - save_cache:
-          key: m2-dependencies-{{ checksum "pom.xml" }}-spotbugs
-          paths:
-            - ~/.m2/repository
-            - ~/.m2/wrapper
           when: always
 
 jobs:
