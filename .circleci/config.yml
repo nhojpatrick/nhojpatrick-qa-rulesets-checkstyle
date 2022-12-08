@@ -162,46 +162,6 @@ commands:
           command: rm -rf ~/.m2/repository/com/github/nhojpatrick
           when: always
 
-  qa_checkstyle:
-    description: "Standard mvnw checkstyle"
-    steps:
-      - checkout
-      - run: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd,qa_checkstyle -DskipTests verify
-      - run:
-          name: "Tidy Cache before save"
-          command: rm -rf ~/.m2/repository/com/github/nhojpatrick
-          when: always
-
-  qa_javadoc:
-    description: "Standard mvnw javadoc"
-    steps:
-      - checkout
-      - run: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd,qa_javadoc -DskipTests verify
-      - run:
-          name: "Tidy Cache before save"
-          command: rm -rf ~/.m2/repository/com/github/nhojpatrick
-          when: always
-
-  qa_pmd:
-    description: "Standard mvnw pmd"
-    steps:
-      - checkout
-      - run: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd,qa_pmd -DskipTests verify
-      - run:
-          name: "Tidy Cache before save"
-          command: rm -rf ~/.m2/repository/com/github/nhojpatrick
-          when: always
-
-  qa_spotbugs:
-    description: "Standard mvnw spotbugs"
-    steps:
-      - checkout
-      - run: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd,qa_spotbugs -DskipTests verify
-      - run:
-          name: "Tidy Cache before save"
-          command: rm -rf ~/.m2/repository/com/github/nhojpatrick
-          when: always
-
 jobs:
   passed_builds:
     docker:
@@ -239,38 +199,6 @@ jobs:
       - setup_openjdk_17_toolchain
       - std_mvnw_jdk17
 
-  checkstyle:
-    docker:
-      - image: cimg/openjdk:8.0
-    steps:
-      - install_openjdk_11
-      - setup_std_toolchain
-      - qa_checkstyle
-
-  javadoc:
-    docker:
-      - image: cimg/openjdk:8.0
-    steps:
-      - install_openjdk_11
-      - setup_std_toolchain
-      - qa_javadoc
-
-  pmd:
-    docker:
-      - image: cimg/openjdk:8.0
-    steps:
-      - install_openjdk_11
-      - setup_std_toolchain
-      - qa_pmd
-
-  spotbugs:
-    docker:
-      - image: cimg/openjdk:8.0
-    steps:
-      - install_openjdk_11
-      - setup_std_toolchain
-      - qa_spotbugs
-
 workflows:
   version: 2
   build_all:
@@ -294,41 +222,7 @@ workflows:
             - jdk8
             - jdk11
             - jdk17
+
       - passed_qa:
           requires:
-            - checkstyle
-            - javadoc
-            - pmd
-            - spotbugs
-      - checkstyle:
-          requires:
             - passed_builds
-          filters:
-            branches:
-              ignore:
-                - develop
-                - main
-      - javadoc:
-          requires:
-            - passed_builds
-          filters:
-            branches:
-              ignore:
-                - develop
-                - main
-      - pmd:
-          requires:
-            - passed_builds
-          filters:
-            branches:
-              ignore:
-                - develop
-                - main
-      - spotbugs:
-          requires:
-            - passed_builds
-          filters:
-            branches:
-              ignore:
-                - develop
-                - main
