@@ -16,12 +16,12 @@
 	<!--description / -->
 	<description>Checkstyle Rule Set project</description>
 	<!--url / -->
-	<url>https://github.com/nhojpatrick/nhojpatrick-qa-ruleset-checkstyle</url>
+	<url>https://github.com/nhojpatrick/${project.artifactId}</url>
 	<!--prerequisites / -->
 	<!--issueManagement / -->
 	<issueManagement>
 		<system>GITHUB</system>
-		<url>https://github.com/nhojpatrick/nhojpatrick-qa-ruleset-checkstyle/issues</url>
+		<url>https://github.com/nhojpatrick/${project.artifactId}/issues</url>
 	</issueManagement>
 	<!--ciManagement / -->
 	<!--inceptionYear / -->
@@ -44,9 +44,9 @@
 	</licenses>
 	<!--scm / -->
 	<scm>
-		<connection>scm:git:git://github.com/nhojpatrick/nhojpatrick-qa-ruleset-checkstyle.git</connection>
-		<developerConnection>scm:git:ssh://github.com:nhojpatrick/nhojpatrick-qa-ruleset-checkstyle.git</developerConnection>
-		<url>https://github.com/nhojpatrick/nhojpatrick-qa-ruleset-checkstyle/tree/main</url>
+		<connection>scm:git:git://github.com/nhojpatrick/${project.artifactId}.git</connection>
+		<developerConnection>scm:git:ssh://github.com:nhojpatrick/${project.artifactId}.git</developerConnection>
+		<url>https://github.com/nhojpatrick/${project.artifactId}/tree/main</url>
 	</scm>
 	<!--organization / -->
 	<!--build / -->
