@@ -496,6 +496,7 @@
 		<plugins.sonatype.nexus-staging-maven-plugin>1.6.13</plugins.sonatype.nexus-staging-maven-plugin>
 		<!-- sortpom-maven-plugin -->
 		<sort.createBackupFile>false</sort.createBackupFile>
+		<sort.encoding>${project.custom.encoding}</sort.encoding>
 		<sort.nrOfIndentSpace>-1</sort.nrOfIndentSpace>
 		<sort.pomFile>pom.xml</sort.pomFile>
 		<sort.sortDependencies>groupId,artifactId,version,scope</sort.sortDependencies>
