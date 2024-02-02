@@ -237,7 +237,7 @@
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>versions-maven-plugin</artifactId>
-					<version>${plugins.codehaus.versions-maven-plugin}</version>
+					<version>${plugins.versions-maven-plugin}</version>
 				</plugin>
 				<plugin>
 					<groupId>org.cyclonedx</groupId>
@@ -490,7 +490,6 @@
 		<project.reporting.outputEncoding>${project.custom.encoding}</project.reporting.outputEncoding>
 		<!-- plugin versions -->
 		<plugins.build-helper-maven-plugin>3.5.0</plugins.build-helper-maven-plugin>
-		<plugins.codehaus.versions-maven-plugin>2.16.2</plugins.codehaus.versions-maven-plugin>
 		<plugins.cyclonedx-maven-plugin>2.7.11</plugins.cyclonedx-maven-plugin>
 		<plugins.ekryd-sortpom-maven-plugin>3.0.1</plugins.ekryd-sortpom-maven-plugin>
 		<plugins.gitflow-maven-plugin>1.21.0</plugins.gitflow-maven-plugin>
@@ -515,6 +514,7 @@
 		<plugins.maven-toolchains-plugin>3.1.0</plugins.maven-toolchains-plugin>
 		<plugins.maven-wrapper-plugin>3.2.0</plugins.maven-wrapper-plugin>
 		<plugins.sonatype.nexus-staging-maven-plugin>1.6.13</plugins.sonatype.nexus-staging-maven-plugin>
+		<plugins.versions-maven-plugin>2.16.2</plugins.versions-maven-plugin>
 		<!-- sortpom-maven-plugin -->
 		<sort.createBackupFile>false</sort.createBackupFile>
 		<sort.encoding>${project.custom.encoding}</sort.encoding>
