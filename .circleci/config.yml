@@ -78,7 +78,7 @@ commands:
                 <id>openjdk-11</id>
               </provides>
               <configuration>
-                <jdkHome>/usr/local/jdk-11.0.13</jdkHome>
+                <jdkHome>/usr/local/jdk-11.0.22</jdkHome>
               </configuration>
             </toolchain>
           </toolchains>
@@ -111,7 +111,7 @@ commands:
                 <id>openjdk-11</id>
               </provides>
               <configuration>
-                <jdkHome>/usr/local/jdk-17.0.2</jdkHome>
+                <jdkHome>/usr/local/jdk-17.0.11</jdkHome>
               </configuration>
             </toolchain>
           </toolchains>
@@ -121,10 +121,6 @@ commands:
     description: "Standard JDK8 mvnw steps"
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - m2-dependencies-{{ checksum "pom.xml" }}
-            - m2-dependencies-
       - run:
           name: "Maven Jdk8 Clean Install"
           command: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd clean install
@@ -135,21 +131,11 @@ commands:
           name: "Tidy Cache before save"
           command: rm -rf ~/.m2/repository/com/github/nhojpatrick
           when: always
-      - save_cache:
-          key: m2-dependencies-{{ checksum "pom.xml" }}
-          paths:
-            - ~/.m2/repository
-            - ~/.m2/wrapper
-          when: always
 
   std_mvnw_jdk11:
     description: "Standard JDK11 mvnw steps"
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - m2-dependencies-{{ checksum "pom.xml" }}
-            - m2-dependencies-
       - run:
           name: "Maven Jdk11 Clean Install SkipTests"
           command: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd clean install -DskipTests
@@ -160,21 +146,11 @@ commands:
           name: "Tidy Cache before save"
           command: rm -rf ~/.m2/repository/com/github/nhojpatrick
           when: always
-      - save_cache:
-          key: m2-dependencies-{{ checksum "pom.xml" }}
-          paths:
-            - ~/.m2/repository
-            - ~/.m2/wrapper
-          when: always
 
   std_mvnw_jdk17:
     description: "Standard Jdk17 mvnw steps"
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - m2-dependencies-{{ checksum "pom.xml" }}
-            - m2-dependencies-
       - run:
           name: "Maven Jdk17 Clean Install SkipTests"
           command: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd clean install -DskipTests
@@ -185,96 +161,14 @@ commands:
           name: "Tidy Cache before save"
           command: rm -rf ~/.m2/repository/com/github/nhojpatrick
           when: always
-      - save_cache:
-          key: m2-dependencies-{{ checksum "pom.xml" }}
-          paths:
-            - ~/.m2/repository
-            - ~/.m2/wrapper
-          when: always
 
-  qa_checkstyle:
-    description: "Standard mvnw checkstyle"
+  qa_step:
+    parameters:
+      stepName:
+        type: string
+    description: "Standard QA Step << parameters.stepName >>"
     steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - m2-dependencies-{{ checksum "pom.xml" }}-checkstyle
-            - m2-dependencies-{{ checksum "pom.xml" }}
-            - m2-dependencies-
-      - run: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd,qa_checkstyle -DskipTests verify
-      - run:
-          name: "Tidy Cache before save"
-          command: rm -rf ~/.m2/repository/com/github/nhojpatrick
-          when: always
-      - save_cache:
-          key: m2-dependencies-{{ checksum "pom.xml" }}-checkstyle
-          paths:
-            - ~/.m2/repository
-            - ~/.m2/wrapper
-          when: always
-
-  qa_javadoc:
-    description: "Standard mvnw javadoc"
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - m2-dependencies-{{ checksum "pom.xml" }}-javadoc
-            - m2-dependencies-{{ checksum "pom.xml" }}
-            - m2-dependencies-
-      - run: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd,qa_javadoc -DskipTests verify
-      - run:
-          name: "Tidy Cache before save"
-          command: rm -rf ~/.m2/repository/com/github/nhojpatrick
-          when: always
-      - save_cache:
-          key: m2-dependencies-{{ checksum "pom.xml" }}-javadoc
-          paths:
-            - ~/.m2/repository
-            - ~/.m2/wrapper
-          when: always
-
-  qa_pmd:
-    description: "Standard mvnw pmd"
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - m2-dependencies-{{ checksum "pom.xml" }}-pmd
-            - m2-dependencies-{{ checksum "pom.xml" }}
-            - m2-dependencies-
-      - run: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd,qa_pmd -DskipTests verify
-      - run:
-          name: "Tidy Cache before save"
-          command: rm -rf ~/.m2/repository/com/github/nhojpatrick
-          when: always
-      - save_cache:
-          key: m2-dependencies-{{ checksum "pom.xml" }}-pmd
-          paths:
-            - ~/.m2/repository
-            - ~/.m2/wrapper
-          when: always
-
-  qa_spotbugs:
-    description: "Standard mvnw spotbugs"
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - m2-dependencies-{{ checksum "pom.xml" }}-spotbugs
-            - m2-dependencies-{{ checksum "pom.xml" }}
-            - m2-dependencies-
-      - run: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd,qa_spotbugs -DskipTests verify
-      - run:
-          name: "Tidy Cache before save"
-          command: rm -rf ~/.m2/repository/com/github/nhojpatrick
-          when: always
-      - save_cache:
-          key: m2-dependencies-{{ checksum "pom.xml" }}-spotbugs
-          paths:
-            - ~/.m2/repository
-            - ~/.m2/wrapper
-          when: always
+      - run: ./mvnw --batch-mode --fail-at-end --no-transfer-progress --update-snapshots -Pcicd,qa_<< parameters.stepName >> -DskipTests verify
 
 jobs:
   passed_builds:
@@ -313,37 +207,21 @@ jobs:
       - setup_openjdk_17_toolchain
       - std_mvnw_jdk17
 
-  checkstyle:
+  qa_matrix:
+    parameters:
+      qa_step_profile:
+        type: string
+      qa_step_jdk:
+        type: string
     docker:
-      - image: cimg/openjdk:8.0
+      - image: cimg/openjdk:<< parameters.qa_step_jdk >>
+    resource_class: small
     steps:
       - install_openjdk_11
       - setup_std_toolchain
-      - qa_checkstyle
-
-  javadoc:
-    docker:
-      - image: cimg/openjdk:8.0
-    steps:
-      - install_openjdk_11
-      - setup_std_toolchain
-      - qa_javadoc
-
-  pmd:
-    docker:
-      - image: cimg/openjdk:8.0
-    steps:
-      - install_openjdk_11
-      - setup_std_toolchain
-      - qa_pmd
-
-  spotbugs:
-    docker:
-      - image: cimg/openjdk:8.0
-    steps:
-      - install_openjdk_11
-      - setup_std_toolchain
-      - qa_spotbugs
+      - checkout
+      - qa_step:
+          stepName: << parameters.qa_step_profile >>
 
 workflows:
   version: 2
@@ -368,41 +246,25 @@ workflows:
             - jdk8
             - jdk11
             - jdk17
+
+      - qa_matrix:
+          name: qa_<< matrix.qa_step_profile >>_jdk_<< matrix.qa_step_jdk >>
+          requires:
+            - passed_builds
+          filters:
+            branches:
+              ignore:
+                - develop
+                - main
+          matrix:
+            parameters:
+              qa_step_profile: [
+                "sortpom"
+              ]
+              qa_step_jdk: [
+                "8.0"
+              ]
+
       - passed_qa:
           requires:
-            - checkstyle
-            - javadoc
-            - pmd
-            - spotbugs
-      - checkstyle:
-          requires:
-            - passed_builds
-          filters:
-            branches:
-              ignore:
-                - develop
-                - main
-      - javadoc:
-          requires:
-            - passed_builds
-          filters:
-            branches:
-              ignore:
-                - develop
-                - main
-      - pmd:
-          requires:
-            - passed_builds
-          filters:
-            branches:
-              ignore:
-                - develop
-                - main
-      - spotbugs:
-          requires:
-            - passed_builds
-          filters:
-            branches:
-              ignore:
-                - develop
-                - main
+            - qa_matrix

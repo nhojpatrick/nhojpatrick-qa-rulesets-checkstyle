@@ -88,8 +88,8 @@ To use checkstyle the following best practice is suggested, with these notes;
 	<properties>
 		<checkstyle.config.location>com/github/nhojpatrick/qa/ruleset/checkstyle/rules.xml</checkstyle.config.location>
 		<checkstyle.maxAllowedViolations>0</checkstyle.maxAllowedViolations>
-		<plugins.maven.maven-checkstyle-plugin>3.1.1</plugins.maven.maven-checkstyle-plugin>
-		<version.com.puppycrawl.tools.checkstyle>8.30</version.com.puppycrawl.tools.checkstyle>
+		<plugins.maven-checkstyle-plugin>3.1.1</plugins.maven-checkstyle-plugin>
+		<version.com.puppycrawl.tools.checkstyle>10.8.1</version.com.puppycrawl.tools.checkstyle>
 	</properties>
 </project>
 ```
